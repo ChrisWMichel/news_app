@@ -16,7 +16,7 @@
     <!-- Custom Styles-->
     <link href="{{asset('assets/css/custom-styles.css')}}" rel="stylesheet" />
     <!-- Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     {{--<link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">--}}
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
 
