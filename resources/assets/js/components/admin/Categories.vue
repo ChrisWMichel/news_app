@@ -84,6 +84,7 @@
         },
         created(){
             this.getCategories();
+            console.log('getCategories')
         },
         computed:{
             isValidName(){
