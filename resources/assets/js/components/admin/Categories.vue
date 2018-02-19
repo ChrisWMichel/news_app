@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Categories</h3>
+        <h3>Create and Manage Categories</h3>
         <hr>
 
         <div class="row">
