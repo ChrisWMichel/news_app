@@ -113,8 +113,7 @@
     {{--<div id="page-wrapper">--}}
         <div id="app">
         <div id="page-inner">
-
-
+            <h2>Content Page</h2>
                 @yield('content')
             </div>
 
