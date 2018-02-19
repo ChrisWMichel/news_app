@@ -102,6 +102,7 @@
             },
             addCategory(){
             console.log('name' + this.add_name);
+            console.log('addCategory');
                 axios.post('api/add_category_name', {name: this.add_name, font: this.font})
                     .then(resp => {
                         this.getCategories();
