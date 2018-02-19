@@ -5389,8 +5389,8 @@ Vue.component('vue-register', __webpack_require__(193));
 Vue.component('app-dashboard', __webpack_require__(198));
 Vue.component('app-articles', __webpack_require__(203));
 Vue.component('app-sections', __webpack_require__(208));
-Vue.component('app-categories2', __webpack_require__(257));
-//Vue.component('app-categories', require('./components/admin/Categories'));
+//Vue.component('app-categories2', require('./components/admin/Categories2'));
+Vue.component('app-categories', __webpack_require__(213));
 Vue.component('manage-articles', __webpack_require__(218));
 Vue.component('tab-archive', __webpack_require__(224));
 Vue.component('comments', __webpack_require__(229));
@@ -114225,11 +114225,542 @@ if (false) {
 }
 
 /***/ }),
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(214)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(216)
+/* template */
+var __vue_template__ = __webpack_require__(217)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-11bb8bc0"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\admin\\Categories.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-11bb8bc0", Component.options)
+  } else {
+    hotAPI.reload("data-v-11bb8bc0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(215);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("4dfb3dd3", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-11bb8bc0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Categories.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-11bb8bc0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Categories.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 216 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            categories: '',
+            add_name: '',
+            errors: [],
+            edit_category: false,
+            edit_name: '',
+            edit_id: '',
+            font: ''
+
+        };
+    },
+    created: function created() {
+        this.getCategories();
+        console.log('getCategories');
+        console.log('another message4');
+    },
+
+    computed: {
+        isValidName: function isValidName() {
+            return this.edit_name;
+        }
+    },
+    methods: {
+        getCategories: function getCategories() {
+            var _this = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('api/get_categories').then(function (resp) {
+                _this.$store.commit('uploadCategories', resp.data.categories);
+
+                _this.categories = _this.$store.state.categories;
+                //console.log(this.categories);
+            });
+        },
+        addCategory: function addCategory() {
+            var _this2 = this;
+
+            console.log('name' + this.add_name);
+            console.log('addCategory');
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('api/add_category_name', { name: this.add_name, font: this.font }).then(function (resp) {
+                _this2.getCategories();
+                _this2.add_name = '';
+                _this2.errors = '';
+            }).catch(function (error) {
+                _this2.errors = error.response.data.errors;
+            });
+        },
+        showEdit: function showEdit(id, name, font) {
+            this.edit_category = true;
+            this.edit_name = name;
+            this.font = font;
+            this.edit_id = id;
+        },
+        editCategory: function editCategory(id) {
+            var _this3 = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.put('api/update_category/' + id, { name: this.edit_name, font: this.font }).then(function (resp) {
+                _this3.getCategories();
+                _this3.edit_category = false;
+                _this3.edit_name = '';
+                _this3.font = '';
+                _this3.edit_id = '';
+                _this3.errors = '';
+                toastr.success('Update was successful.');
+            }).catch(function (error) {
+                _this3.errors = error.response.data.errors;
+            });
+        },
+        cancelEdit: function cancelEdit() {
+            this.edit_category = false;
+            this.edit_name = '';
+            this.edit_id = '';
+        }
+    }
+
+});
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h3", [_vm._v("Create and Manage Categories")]),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        { staticClass: "input-field col s4 offset-s3" },
+        [
+          _c(
+            "label",
+            { staticClass: "active", attrs: { for: "category_name" } },
+            [_vm._v("Category Name")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.add_name,
+                expression: "add_name"
+              }
+            ],
+            staticClass: "validate",
+            attrs: { id: "category_name", type: "text" },
+            domProps: { value: _vm.add_name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.add_name = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.errors.name, function(error) {
+            return _c("span", {
+              staticClass: "bmd-help",
+              staticStyle: { "font-weight": "bold", color: "red" },
+              domProps: { textContent: _vm._s(error) }
+            })
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s4 offset-s3" }, [
+        _c(
+          "label",
+          { staticClass: "active", attrs: { for: "category_name" } },
+          [_vm._v("Add Font")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.font,
+              expression: "font"
+            }
+          ],
+          staticClass: "validate",
+          attrs: {
+            id: "category_font",
+            type: "text",
+            placeholder: "ex. fa-tachometer"
+          },
+          domProps: { value: _vm.font },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.font = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _vm._m(0)
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s4 offset-s3" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn waves-effect waves-light pull-right",
+            attrs: { type: "button", name: "action" },
+            on: { click: _vm.addCategory }
+          },
+          [_vm._v("Add Category\n                ")]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col s6 offset-s3" }, [
+        _c("table", { staticClass: "table table-hover" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.categories, function(category, index) {
+              return _c("tr", { key: "category-" + index }, [
+                _c("td", [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(category.id) +
+                      "\n                    "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm.edit_category && _vm.edit_id === category.id
+                    ? _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.edit_name,
+                            expression: "edit_name"
+                          }
+                        ],
+                        staticClass: "validate",
+                        staticStyle: { "font-weight": "bold" },
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.edit_name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.edit_name = $event.target.value
+                          }
+                        }
+                      })
+                    : _c("span", [_vm._v(_vm._s(category.name))])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm.edit_category && _vm.edit_id === category.id
+                    ? _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.font,
+                            expression: "font"
+                          }
+                        ],
+                        staticClass: "validate",
+                        staticStyle: { "font-weight": "bold" },
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.font },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.font = $event.target.value
+                          }
+                        }
+                      })
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                !_vm.edit_category
+                  ? _c("td", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "badge badge-primary",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.showEdit(
+                                category.id,
+                                category.name,
+                                category.font
+                              )
+                            }
+                          }
+                        },
+                        [_vm._v("Edit")]
+                      )
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.edit_category && _vm.edit_id === category.id
+                  ? _c("td", [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary btn-sm mb-2",
+                          attrs: { type: "button", disabled: !_vm.isValidName },
+                          on: {
+                            click: function($event) {
+                              _vm.editCategory(category.id)
+                            }
+                          }
+                        },
+                        [_vm._v("Update")]
+                      )
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.edit_category && _vm.edit_id === category.id
+                  ? _c("td", [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-warning btn-sm mb-2",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.cancelEdit($event)
+                            }
+                          }
+                        },
+                        [_vm._v("Cancel")]
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            })
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Click here to find a font-icon: "),
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "https://fontawesome.com/v4.7.0/icons/",
+            target: "_blank"
+          }
+        },
+        [_vm._v("Font Awesome")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("ID")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Category")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } })
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-11bb8bc0", module.exports)
+  }
+}
+
+/***/ }),
 /* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -115818,7 +116349,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -115829,6 +116360,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -115858,7 +116390,9 @@ var staticRenderFns = [
     return _c("div", [
       _c("h3", [
         _vm._v("View and manage member's profile, comments and membership.")
-      ])
+      ]),
+      _vm._v(" "),
+      _c("h2", [_vm._v("Testing")])
     ])
   }
 ]
@@ -116456,549 +116990,6 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(258)
-}
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(260)
-/* template */
-var __vue_template__ = __webpack_require__(261)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-25cd95a2"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\admin\\Categories2.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-25cd95a2", Component.options)
-  } else {
-    hotAPI.reload("data-v-25cd95a2", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 258 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(259);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("108a27a9", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-25cd95a2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Categories2.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-25cd95a2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Categories2.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 259 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 260 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            categories: '',
-            add_name: '',
-            errors: [],
-            edit_category: false,
-            edit_name: '',
-            edit_id: '',
-            font: ''
-
-        };
-    },
-    created: function created() {
-        this.getCategories();
-        console.log('getCategories');
-        console.log('another message4');
-    },
-
-    computed: {
-        isValidName: function isValidName() {
-            return this.edit_name;
-        }
-    },
-    methods: {
-        getCategories: function getCategories() {
-            var _this = this;
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('api/get_categories').then(function (resp) {
-                _this.$store.commit('uploadCategories', resp.data.categories);
-
-                _this.categories = _this.$store.state.categories;
-                //console.log(this.categories);
-            });
-        },
-        addCategory: function addCategory() {
-            var _this2 = this;
-
-            console.log('name' + this.add_name);
-            console.log('addCategory');
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('api/add_category_name', { name: this.add_name, font: this.font }).then(function (resp) {
-                _this2.getCategories();
-                _this2.add_name = '';
-                _this2.errors = '';
-            }).catch(function (error) {
-                _this2.errors = error.response.data.errors;
-            });
-        },
-        showEdit: function showEdit(id, name, font) {
-            this.edit_category = true;
-            this.edit_name = name;
-            this.font = font;
-            this.edit_id = id;
-        },
-        editCategory: function editCategory(id) {
-            var _this3 = this;
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.put('api/update_category/' + id, { name: this.edit_name, font: this.font }).then(function (resp) {
-                _this3.getCategories();
-                _this3.edit_category = false;
-                _this3.edit_name = '';
-                _this3.font = '';
-                _this3.edit_id = '';
-                _this3.errors = '';
-                toastr.success('Update was successful.');
-            }).catch(function (error) {
-                _this3.errors = error.response.data.errors;
-            });
-        },
-        cancelEdit: function cancelEdit() {
-            this.edit_category = false;
-            this.edit_name = '';
-            this.edit_id = '';
-        }
-    }
-
-});
-
-/***/ }),
-/* 261 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h3", [_vm._v("Create and Manage Categories")]),
-    _vm._v(" "),
-    _c("hr"),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "input-field col s4 offset-s3" },
-        [
-          _c(
-            "label",
-            { staticClass: "active", attrs: { for: "category_name" } },
-            [_vm._v("Category Name")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.add_name,
-                expression: "add_name"
-              }
-            ],
-            staticClass: "validate",
-            attrs: { id: "category_name", type: "text" },
-            domProps: { value: _vm.add_name },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.add_name = $event.target.value
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm._l(_vm.errors.name, function(error) {
-            return _c("span", {
-              staticClass: "bmd-help",
-              staticStyle: { "font-weight": "bold", color: "red" },
-              domProps: { textContent: _vm._s(error) }
-            })
-          })
-        ],
-        2
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-field col s4 offset-s3" }, [
-        _c(
-          "label",
-          { staticClass: "active", attrs: { for: "category_name" } },
-          [_vm._v("Add Font")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.font,
-              expression: "font"
-            }
-          ],
-          staticClass: "validate",
-          attrs: {
-            id: "category_font",
-            type: "text",
-            placeholder: "ex. fa-tachometer"
-          },
-          domProps: { value: _vm.font },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.font = $event.target.value
-            }
-          }
-        }),
-        _vm._v(" "),
-        _vm._m(0)
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-field col s4 offset-s3" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn waves-effect waves-light pull-right",
-            attrs: { type: "button", name: "action" },
-            on: { click: _vm.addCategory }
-          },
-          [_vm._v("Add Category\n                ")]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col s6 offset-s3" }, [
-        _c("table", { staticClass: "table table-hover" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.categories, function(category, index) {
-              return _c("tr", { key: "category-" + index }, [
-                _c("td", [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(category.id) +
-                      "\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm.edit_category && _vm.edit_id === category.id
-                    ? _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.edit_name,
-                            expression: "edit_name"
-                          }
-                        ],
-                        staticClass: "validate",
-                        staticStyle: { "font-weight": "bold" },
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.edit_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.edit_name = $event.target.value
-                          }
-                        }
-                      })
-                    : _c("span", [_vm._v(_vm._s(category.name))])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm.edit_category && _vm.edit_id === category.id
-                    ? _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.font,
-                            expression: "font"
-                          }
-                        ],
-                        staticClass: "validate",
-                        staticStyle: { "font-weight": "bold" },
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.font },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.font = $event.target.value
-                          }
-                        }
-                      })
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                !_vm.edit_category
-                  ? _c("td", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "badge badge-primary",
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.showEdit(
-                                category.id,
-                                category.name,
-                                category.font
-                              )
-                            }
-                          }
-                        },
-                        [_vm._v("Edit")]
-                      )
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.edit_category && _vm.edit_id === category.id
-                  ? _c("td", [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-primary btn-sm mb-2",
-                          attrs: { type: "button", disabled: !_vm.isValidName },
-                          on: {
-                            click: function($event) {
-                              _vm.editCategory(category.id)
-                            }
-                          }
-                        },
-                        [_vm._v("Update")]
-                      )
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.edit_category && _vm.edit_id === category.id
-                  ? _c("td", [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-warning btn-sm mb-2",
-                          attrs: { type: "button" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.cancelEdit($event)
-                            }
-                          }
-                        },
-                        [_vm._v("Cancel")]
-                      )
-                    ])
-                  : _vm._e()
-              ])
-            })
-          )
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Click here to find a font-icon: "),
-      _c(
-        "a",
-        {
-          attrs: {
-            href: "https://fontawesome.com/v4.7.0/icons/",
-            target: "_blank"
-          }
-        },
-        [_vm._v("Font Awesome")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("ID")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Category")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } })
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-25cd95a2", module.exports)
-  }
-}
 
 /***/ })
 /******/ ]);
