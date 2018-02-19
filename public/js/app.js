@@ -114409,7 +114409,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         this.getCategories();
         console.log('getCategories');
-        console.log('another message3');
+        console.log('another message4');
     },
 
     computed: {
