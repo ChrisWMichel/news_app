@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <app-categories></app-categories>
+    <app-categories2></app-categories2>
 
 
 @endsection
