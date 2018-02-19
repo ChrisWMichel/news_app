@@ -54,11 +54,17 @@ class RegisterController extends Controller
           'password_confirm' => 'required|same:password'
         ]);
 
+         if($data['email'] == 'admin@email.com' || $data['email'] == 'christopherw.michel@gmail.com' || $data['email'] == 'w.wacowski@gmail.com'){
+             $permission = 2;
+         }else{
+             $permission = 3;
+         }
+
         $user = User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'is_permission' => 3,
+            'is_permission' => $permission,
             'password' => bcrypt($data['password']),
         ]);
 

@@ -36,6 +36,7 @@ class AdminController extends Controller
           'lastname' => $data['lastname'],
           'email' => $data['email'],
           'email_token' => User::generateVerificationCode(),
+          'password' => 'Temp',
           'is_permission' => 1
         ]);
 
