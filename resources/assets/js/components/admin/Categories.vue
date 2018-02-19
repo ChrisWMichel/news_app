@@ -85,7 +85,7 @@
         created(){
             this.getCategories();
             console.log('getCategories');
-            console.log('another message2')
+            console.log('another message3')
         },
         computed:{
             isValidName(){
